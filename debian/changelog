@@ -1,5 +1,64 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-kdcproxy (1.0.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
+  * control: Migrate to debhelper-compat.
+  * control: Bump policy to 4.5.1.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 17 Dec 2020 12:11:05 +0200
+
+python-kdcproxy (0.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Switch to python3 only. (Closes: #937868)
+  * compat, control: Bump debhelper to 12.
+  * control: Bump policy to 4.4.0.
+  * control: Drop -X-Python3-Version.
+  * control: Update vcs urls.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 12 Sep 2019 00:17:47 +0300
+
+python-kdcproxy (0.3.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update upstream urls, add VCS urls.
+  * Bump debhelper to 10.
+  * Remove obsolete patches.
+  * control: Add python-setuptools to build-depends.
+  * rules: Override dh_clean.
+  * control: Bump policy to 4.1.2, no changes.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Sun, 24 Dec 2017 11:51:38 +0200
+
+python-kdcproxy (0.3.2-5) unstable; urgency=medium
+
+  * rules: Disable tests, no way to stop accessing the network it seems.
+    (Closes: #854191)
+  * Add upstream README to packages. (Closes: #843203)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Sun, 05 Feb 2017 08:03:59 +0200
+
+python-kdcproxy (0.3.2-4) unstable; urgency=medium
+
+  * rules: Set a local http_proxy to avoid accessing network.
+    (Closes: #833000)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 27 Oct 2016 10:18:34 +0300
+
+python-kdcproxy (0.3.2-3) unstable; urgency=medium
+
+  * control: Add libkrb5-3 to build-depends.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 23 Mar 2016 01:18:00 +0200
+
+python-kdcproxy (0.3.2-2) unstable; urgency=medium
+
+  * rules: Override dh_auto_test.
+  * workaround-mock-bug.diff: Fix failing tests. (Closes: #815395)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 17 Mar 2016 10:08:03 +0200
+
+python-kdcproxy (0.3.2-1) unstable; urgency=low
+
+  * Initial upload. (Closes: #802491)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 20 Oct 2015 23:44:32 +0300
