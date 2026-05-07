@@ -1,3 +1,16 @@
+python-kdcproxy (1.0.0-1deepin1) unstable; urgency=medium
+
+  * Fix CVE-2025-59089: Fix DoS vulnerability based on unbounded TCP
+    buffering.          In Application.__handle_recv(), the next part of
+    the TCP exchange is     received and queued to the io.BytesIO
+    stream. This update fixes:     - Interrupt receiving message after
+    exceeding maximum length     - Only export buffer content once
+    receiving process has ended     .     Upstream:
+    https://github.com/latchset/kdcproxy/commit/c7675365aa20be11f0324796
+    6336c7613cac84e1
+
+ -- deepin-ci-robot <packages@deepin.org>  Thu, 07 May 2026 20:52:40 +0800
+
 python-kdcproxy (1.0.0-1) unstable; urgency=medium
 
   * New upstream release.
