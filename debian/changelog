@@ -1,3 +1,16 @@
+python-kdcproxy (1.0.0-1deepin2) unstable; urgency=medium
+
+  * Fix CVE-2025-59088: Unauthenticated SSRF via Realm-Controlled DNS.
+    Allowing DNS discovery for any requested realm created a SSRF
+    vulnerability. This update:     - Makes use_dns apply only to realms
+    declared in configuration     - Adds wildcard support for realm
+    section names     - Adds dns_realm_discovery parameter for unsafe
+    behavior     .     Upstream:
+    https://github.com/latchset/kdcproxy/commit/1773f28eeea72ec6efcd433d
+    3b66595c44d1253f
+
+ -- deepin-ci-robot <packages@deepin.org>  Thu, 07 May 2026 20:53:10 +0800
+
 python-kdcproxy (1.0.0-1deepin1) unstable; urgency=medium
 
   * Fix CVE-2025-59089: Fix DoS vulnerability based on unbounded TCP
